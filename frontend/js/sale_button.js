@@ -19,9 +19,9 @@ class SaleButton{
 		bouton.innerHTML = 
 			"<div class='name'><span class='trigram'>" + this.trigram + "</span> - <span class='full_name'>" + this.fullname + "</span></div>" +
 			"<div class='infos'><div class='prices'>" +
-			"<span class='actual_price'>" + this.actual_price + "€</span>" +
+            "<span class='actual_price'>" + this.actual_price + " kr.</span>" +
 				"<div>" +
-				"<div class='initial_price'>" + this.initial_price + "€</div>" +
+                "<div class='initial_price'>" + this.initial_price + " kr.</div>" +
 				"<div class='variation'>0%</div>" +
 			"</div></div>" +
 			"<div class='add_sale' style='background-color:" + this.colour + "'>0</div>" +
@@ -38,7 +38,7 @@ class SaleButton{
         this.actual_price = new_price
         el.setAttribute("actual_price", this.actual_price)
 
-        el.querySelector('.actual_price').innerHTML = round(new_price, 2) + "€"
+        el.querySelector('.actual_price').innerHTML =  round(new_price, 2) + " kr."
 
         let variation = round((new_price / this.initial_price - 1) * 100, 1)
         let variation_sign

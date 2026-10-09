@@ -12,7 +12,7 @@ class Prices{
 
     constructor(amplification = 100){
         this.amplification = amplification
-        document.getElementById("parametre_prices_var_amp").value = amplification
+        document.getElementById("price_variation_amplification").value = amplification
     }
     
     load(json_object){
@@ -82,7 +82,7 @@ class Prices{
     }
 
     price_variation(new_sales, former_prices, milliseconds_since_last_update){
-        // compte le nombre total de boissons vendues sur l'intervalle de temps.
+        // Count the total number of drinks sold during the interval.
         let total_sales = new_sales.length
     
         let sales_per_drink = new Sales().cumulative_sales(new_sales)

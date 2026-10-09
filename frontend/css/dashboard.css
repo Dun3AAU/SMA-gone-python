@@ -8,22 +8,22 @@ html {
 html.active_krach {
     background-image: radial-gradient( circle farthest-corner at -4% -12.9%,  rgb(76, 33, 33) 0.3%, rgb(45, 18, 18) 90.2% );
 }
-.conteneur {
+.surface {
     padding : 20px;
     border-radius: 12px;
 }
-body .conteneur{
+body .surface{
     background-color: rgba(255, 255, 255, 0.05);
 }
 
-#banniere {
+#dashboard_header {
     display: flex;
     width:100%;
     height:90px;
     box-sizing: border-box;
 }
-#titre {
-    font-size: 45px;
+#dashboard_title {
+    font-size: 40px;
     font-weight: 700;
     margin-left: 25px;
     align-self: center;
@@ -41,7 +41,7 @@ body .conteneur{
     text-align: left;
     font-size: 1.1em;
 }
-#cheapest .hashtag_prix {
+#cheapest .ranking_number {
     font-size: 60px;
     font-weight: 600;
     color: #30ff70;
@@ -49,35 +49,51 @@ body .conteneur{
     margin-left:40px;
     margin-right:5px;
 }
-#cheapest .indice {
+#cheapest .beer_name {
     font-size: 25px;
     font-family: sans-serif;
     margin-right:10px;
 }
 
-#afficheur_prix {
+#price_table {
     width:100%;
     height:100%;
     border-collapse: collapse;
     min-width:500px;
 }
-#afficheur_prix th {
+#price_table th {
     width:33%;
 }
-#afficheur_prix tr:nth-child(even) {background: rgba(255,255,255,0.06);}
+#price_table tr:nth-child(even) {background: rgba(255,255,255,0.06);}
 
-#afficheur_prix tr[growth="positive"] .indice, #afficheur_prix tr[growth="positive"] .prix, #afficheur_prix tr[growth="positive"] .croissance {color : rgb(60, 151, 60);}
-#afficheur_prix tr[growth="negative"] .indice, #afficheur_prix tr[growth="negative"] .prix, #afficheur_prix tr[growth="negative"] .croissance {color : rgb(202, 58, 58);}
+#price_table tr[growth="positive"] .beer_code, #price_table tr[growth="positive"] .price, #price_table tr[growth="positive"] .growth {color : rgb(60, 151, 60);}
+#price_table tr[growth="negative"] .beer_code, #price_table tr[growth="negative"] .price, #price_table tr[growth="negative"] .growth {color : rgb(202, 58, 58);}
 
-#afficheur_prix tr .prix {
+#price_table tr .price {
     font-weight: 700;
 }
 
-#afficheur_prix th.cercle, #afficheur_prix th.indice, #afficheur_prix th.prix, #afficheur_prix th.croissance {
+#price_table th.swatch, #price_table th.beer_code, #price_table th.price, #price_table th.growth {
     width:fit-content;
     margin-right:2px;
 }
 
-#afficheur_prix td.indice, #afficheur_prix td.prix, #afficheur_prix td.croissance {
+#price_table td.beer_code, #price_table td.price, #price_table td.growth {
     text-align: center;
+}
+
+@media (max-width: 1400px) {
+    #dashboard_title {
+        font-size: 32px;
+        margin-left: 15px;
+    }
+
+    #cheapest .ranking_number {
+        font-size: 45px;
+        margin-left: 20px;
+    }
+
+    #cheapest .beer_name {
+        font-size: 20px;
+    }
 }

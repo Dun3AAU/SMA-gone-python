@@ -62,7 +62,7 @@
 				<div id="party_info">
 					<div>new prices in <span id="remaining_time_til_new_prices"></span></div>
 				</div>
-				<div id="button_parametres">
+				<div id="settings_button">
 					<div>Parametres</div>
 				</div>
 				<div id="krach">
@@ -75,9 +75,9 @@
 						<div class="name"><span class="trigram">MAR</span> - aux canards dans l'étang</div>
 						<div class="infos">
 							<div class="prices">
-								<span class="actual_price">3€45</span>
+								<span class="actual_price">3.45 kr.</span>
 								<div>
-									<div class="initial_price">2€32</div>
+									<div class="initial_price">2.32 kr.</div>
 									<div class="variation">+24%</div>
 								</div>
 							</div>
@@ -87,21 +87,21 @@
 				</template>
 			</div>
 		</div>
-		<div id="parametres" style="display: none;" class="big_buttons">
+		<div id="settings_panel" style="display: none;" class="big_buttons">
 			<div class="multiple_buttons_container">
-				<div class="parametre gradient_div" style="background-image: linear-gradient(240deg, #ff823c 0%, #ffc94c 100%);">
+				<div class="setting_control gradient_div" style="background-image: linear-gradient(240deg, #ff823c 0%, #ffc94c 100%);">
 					<h2>Refresh period</h2>
-					<input type="number" id="parametre_refresh_period" value=""/>
+					<input type="number" id="refresh_period" value=""/>
 					<p>Compute new prices every n seconds.</p>
 				</div>
-				<div class="parametre gradient_div" style="background-image: linear-gradient(99deg, #ff823c 0%, #ffc94c 100%);">
+				<div class="setting_control gradient_div" style="background-image: linear-gradient(99deg, #ff823c 0%, #ffc94c 100%);">
 					<h2>Prices variation amplification</h2>
-					<input type="number" id="parametre_prices_var_amp" value="">
+					<input type="number" id="price_variation_amplification" value="">
 					<p>Handles the price variation amplification.</p>
 				</div>
 			</div>
 			<div style="margin-top: 40px;">
-				<div id="validate_parametres" class="gradient_button" style="background-image: linear-gradient(193deg, #ff823c 0%, #ffc94c 100%);">
+				<div id="validate_settings" class="gradient_button" style="background-image: linear-gradient(193deg, #ff823c 0%, #ffc94c 100%);">
 					Validate
 				</div>
 			</div>

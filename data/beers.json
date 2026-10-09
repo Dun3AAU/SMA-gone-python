@@ -1,0 +1,12 @@
+{
+  "tgb": {"full_name": "Tuborg Guld/Gold", "initial_price": 44, "krach_price": 14.67},
+  "wih": {"full_name": "Windy Hill", "initial_price": 67, "krach_price": 22.33},
+  "166": {"full_name": "1664", "initial_price": 57, "krach_price": 19},
+  "pul": {"full_name": "Pulp Art", "initial_price": 62, "krach_price": 20.67},
+  "jrl": {"full_name": "Japanese Rice Lager", "initial_price": 67, "krach_price": 22.33},
+  "seh": {"full_name": "Special Effects Hoppy Lager", "initial_price": 62, "krach_price": 20.67},
+  "swi": {"full_name": "Stonewall Inn IPA", "initial_price": 62, "krach_price": 20.67},
+  "dab": {"full_name": "Double Ambrée", "initial_price": 57, "krach_price": 19},
+  "gbl": {"full_name": "Grimbergen Blonde", "initial_price": 57, "krach_price": 19},
+  "jui": {"full_name": "Juicy IPA", "initial_price": 62, "krach_price": 20.67}
+}

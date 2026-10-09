@@ -23,7 +23,7 @@ const config = {
 				ticks: {
 					color: '#fff',
 					callback: function(value) {
-                        return round(value, 1) + " €";
+						return round(value, 1) + " kr.";
                     }
 				},
 				grid: {
@@ -77,14 +77,14 @@ class ChartExtension{
 		return this.chart.data.labels[0]
 	}
 
-	addNewCurve(trigram, full_name, couleur, data) {
+	addNewCurve(trigram, full_name, color, data) {
 		this.chart.data.datasets.push({
 			type: 'line',
 			trigram: trigram,
 			label : full_name,
 			data: data,
 			fill: false,
-			borderColor: couleur,
+			borderColor: color,
 			tension : 0.3,
 		});
 		this.trigram_displayed.push(trigram)
@@ -115,8 +115,8 @@ class ChartExtension{
 var chart = new ChartExtension(ctx, config)
 
 function init_chart(){
-    let nbr_points = nbr_of_point_to_display()
-    let i = Math.max(0, indexes.party_index.length - nbr_points)
+	let number_of_points = number_of_points_to_display()
+	let i = Math.max(0, indexes.party_index.length - number_of_points)
     while(i < indexes.party_index.length){
         chart.addAxisLabel(indexes.party_index[i][0])
         i ++
@@ -126,7 +126,7 @@ function init_chart(){
 
 function display_new_curve(){
     let trigram = trigram_to_display()
-	let last_prices = prices_history[trigram].slice(- nbr_of_point_to_display())
+	let last_prices = prices_history[trigram].slice(- number_of_points_to_display())
     let full_name = default_prices[trigram]["full_name"]
     let color = default_prices[trigram]["colour"]
 
@@ -138,7 +138,7 @@ function display_new_curve(){
     chart.update()
 }
 
-function nbr_of_point_to_display(){
+function number_of_points_to_display(){
     return (minutes_for_points_history * 60) / indexes.refresh_period
 }
 

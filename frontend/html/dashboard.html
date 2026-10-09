@@ -6,38 +6,38 @@
 <html>
 	<body style="margin:0" class="dark">
 		<div style="height:100vh;width:100vw;margin:0;overflow:hidden;display:flex; flex-flow: column;">
-			<div id="remerciements" style="position:absolute; color:rgba(255,255,255,0.6); top:0px; right:6px;">
-				developed by Marc Bresson
+			<div id="attribution" style="position:absolute; color:rgba(255,255,255,0.6); top:0px; right:6px;">
+				Visuals by Marc Bresson
 			</div>
-			<div class="conteneur" style="margin:20px 10px 0px 10px; padding:0px">
-				<div id="banniere">
+			<div class="surface" style="margin:20px 10px 0px 10px; padding:0px">
+				<div id="dashboard_header">
 					<div id="logo" style="float:left;">
 						<img src="../parametres/logo.png" height="100%"/>
 					</div>
-					<div id="titre">
-						Soirée bourse
+					<div id="dashboard_title">
+						BarDS, a BDS stock inspired bar dashboard
 					</div>
 					<span id="cheapest">
 						<span>cheapest</span>
-						<span><span class="hashtag_prix">#1</span><span class="indice" id="numero_1"></span></span>
-						<span><span class="hashtag_prix">#2</span><span class="indice" id="numero_2"></span></span>
-						<span><span class="hashtag_prix">#3</span><span class="indice" id="numero_3"></span></span>
+						<span><span class="ranking_number">#1</span><span class="beer_name" id="rank_1"></span></span>
+						<span><span class="ranking_number">#2</span><span class="beer_name" id="rank_2"></span></span>
+						<span><span class="ranking_number">#3</span><span class="beer_name" id="rank_3"></span></span>
 					</span>
 				</div>
 			</div>
 			<div style="display:flex; flex-flow: row; flex: 1 1 auto;margin:10px;">
-				<div class="chart-container conteneur" style="position: relative; height:100%; width:70%; box-sizing: border-box; margin-right: 10px; flex: 1 1 auto;">
+				<div class="chart-container surface" style="position: relative; height:100%; width:70%; box-sizing: border-box; margin-right: 10px; flex: 1 1 auto;">
 					<canvas id="chart" style="width:100%;height:100%;"></canvas>
 				</div>
-				<div class="conteneur" style="height:100%; width: auto; box-sizing: border-box;">
-					<table id="afficheur_prix">
+				<div class="surface" style="height:100%; width: auto; box-sizing: border-box;">
+					<table id="price_table">
 						<thead>
 							<tr>
-								<th class="cercle"></th>
-								<th class="nom">name</th>
-								<th class="indice">index</th>
-								<th class="prix">price</th>
-								<th class="croissance">growth</th>
+								<th class="swatch"></th>
+								<th class="name">name</th>
+								<th class="beer_code">index</th>
+								<th class="price">price</th>
+								<th class="growth">growth</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -55,8 +55,7 @@
 	minutes_for_points_history = 15
 </script>
 
-<script src="../parametres/default_prices.js"></script>
-<script src="../js/data.js"></script>
+<script src="../js/utils.js"></script>
 <script src="../js/dashboard_chart.js"></script>
 <script src="../js/countdown.js"></script>
 <script src="../js/sale_animation.js"></script>

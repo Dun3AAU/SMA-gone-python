@@ -2,7 +2,7 @@ what_to_do_with_data = document.getElementById("what_to_do_with_data")
 start_the_party = document.getElementById("start_the_party")
 stock_market = document.getElementById("stock_market")
 scheduler = document.getElementById("scheduler")
-parametres = document.getElementById("parametres")
+settings_panel = document.getElementById("settings_panel")
 
 function tabs_to_display(){
     if(has_data()){
@@ -41,9 +41,9 @@ function go_to_scheduler(){
     })
 }
 
-function go_to_parametres(){
-    parametres.style.display = "flex"
-    parametres.scrollIntoView({
+function go_to_settings(){
+    settings_panel.style.display = "flex"
+    settings_panel.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
     })
@@ -76,8 +76,8 @@ document.getElementById("start_now").addEventListener("click", () => {
     open_dashboard()
 })
 
-document.getElementById("button_parametres").addEventListener("click", () => {
-    go_to_parametres()
+document.getElementById("settings_button").addEventListener("click", () => {
+    go_to_settings()
 })
 
 var countdown_til_start
@@ -119,11 +119,11 @@ function extract_value_from_schedule(){
     return [datetime_start, message]
 }
 
-parametre_refresh_period = document.getElementById("parametre_refresh_period")
-parametre_prices_var_amp = document.getElementById("parametre_prices_var_amp")
-document.getElementById("validate_parametres").addEventListener("click", () => {
-    indexes.refresh_period = parseInt(parametre_refresh_period.value)
-    prices.amplification = parseInt(parametre_prices_var_amp.value)
+refresh_period_input = document.getElementById("refresh_period")
+price_variation_amplification_input = document.getElementById("price_variation_amplification")
+document.getElementById("validate_settings").addEventListener("click", () => {
+    indexes.refresh_period = parseInt(refresh_period_input.value)
+    prices.amplification = parseInt(price_variation_amplification_input.value)
 
     go_to_stock_market()
 })

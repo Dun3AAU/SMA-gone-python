@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+.venv/
+data/market.sqlite3
+data/market.sqlite3-shm
+data/market.sqlite3-wal
